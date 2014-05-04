@@ -8,10 +8,13 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "tabs",
     "<all_urls>"
   ],
   "background": {
     "scripts": [
+        "sha1.js",
+        "enc-base64-min.js",
         "background.js"
     ]
   }
