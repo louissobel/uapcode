@@ -12,7 +12,7 @@ app.debug = True
 chars = list('0123456789abcdef')
 get_rrealm = lambda : ''.join([random.choice(chars) for _ in range(6)])
 
-KEY_FILE = 'tcb_key.pub'
+KEY_FILE = 'chrome.pub'
 with open(KEY_FILE) as f:
     keydata = f.read()
 pubkey = rsa.PublicKey.load_pkcs1(keydata)
@@ -51,7 +51,7 @@ def index():
         rh.next()
         return ("<h1>YAY!</h1><h2>%s</h2>" % rh.r) + FORM
     else:
-        response = flask.make_response('', 401)
+        response = flask.make_response('<h1>Unauthorized</h1>', 401)
         response.headers['www-authenticate'] = 'basic realm="%s"' % rh.r
         return response
 
