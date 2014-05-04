@@ -1,0 +1,87 @@
+<html><head>
+  <title>Game</title>
+
+  <style type="text/css">
+
+  body {
+    font-family:sans-serif;
+  }
+
+  #results {
+    border-style:dashed;
+    border-color:black;
+    border-width:1px;
+    width:400px;
+    min-height:20px;
+    font-family:monospace;
+    color:blue;
+    margin-bottom:5px;
+  }
+
+  .button {
+    float:left;
+    height:30px;
+    width:30px;
+    margin:5px;
+    font-size:20px;
+    line-height:30px;
+    border-radius:5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    cursor:pointer;
+    text-align:center;
+    color:blue;
+  }
+
+  .button:active {
+    background-color:#eee;
+  }
+
+  .clearfix {
+    clear:both;
+  }
+
+  </style>
+
+  <script type="text/javascript">
+    var init = function () {
+    };
+
+    var reset = function () {
+      document.getElementById("score").innerHTML = "0";
+      document.getElementById("status").innerHTML = "&nbsp;";
+      document.getElementById("results").innerHTML = "";
+    };
+  </script>
+
+</head>
+<body onload="init()">
+  <div>
+  <h1>Number Guessing Game</h1>
+  <p>
+    Will the next number be a one or a zero?
+  </p>
+  <p>
+    Score: <span id="score">0</span>
+  </p>
+  <div id="status">
+    &nbsp;
+  </div>
+  <div id="results">
+
+  </div>
+
+  <div id="buttons">
+    <div>
+      <div class="button" id="button-0" data-value="0">0</div>
+      <div class="button" id="button-1" data-value="1">1</div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div id="highscore">
+    <form action="" method="POST">
+    <input type="hidden" name="x" value="1">
+    <input type="submit" value="submit">
+    </form></div></div></body></html> 

@@ -1,0 +1,80 @@
+<html><head>
+  <title>Game</title>
+
+  <style type="text/css">
+
+  body {
+    font-family:sans-serif;
+  }
+
+  .button {
+    float:left;
+    height:30px;
+    width:30px;
+    margin:5px;
+    font-size:20px;
+    line-height:30px;
+    border-radius:5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+    cursor:pointer;
+    text-align:center;
+    color:blue;
+  }
+
+  #new-game {
+    width:120px;
+  }
+
+  .clearfix {
+    clear:both;
+  }
+
+  .button:active {
+    background-color:#eee;
+  }
+
+  thead {
+    font-weight:bold;
+  }
+  </style>
+
+</head>
+<body>
+  <h1>Number Guessing Game -- Scores</h1>
+  <a href="/"><div class="button" id="new-game">New Game</div></a>
+
+  <div class="clearfix"></div>
+  <table>
+    <thead>
+      <tr>
+        <td>
+          Score
+        </td>
+        <td>
+          Name
+        </td>
+        <td>
+          Date
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for score in scores %}
+        <tr>
+          <td>
+            {{score[1]}}
+          </td>
+          <td>
+            {{score[0]}}
+          </td>
+          <td>
+            {{score[2]}}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </body></html>
