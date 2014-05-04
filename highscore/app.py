@@ -34,6 +34,23 @@ class ChromeAttestationHandler(AttestationHandler):
             actual = base64.b64decode(extra_attestation)
             return expected == actual
 
+
+@attestation_manager.register_handler_class
+class PythonAttestationHandler(AttestationHandler):
+    public_key_file = os.path.join(app.root_path, 'requests.public')
+
+    def will_accept_attestation(self, attestation):
+        return attestation == 'python'
+
+    def will_accept_extra_attestation(self, attestation, extra_attestation, request):
+        # Check that the extra attestation is base64 encoded
+        # SHA1 of the main module of the pyhighscore client
+        with open(os.path.join(app.root_path, 'pyhighscore.py')) as f:
+            client_code_contents = f.read()
+
+        expected = base64.b64encode(hashlib.sha1(client_code_contents).digest())
+        return expected == extra_attestation
+
 scores = []
 
 @app.route('/', methods=('GET',))
