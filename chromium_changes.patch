@@ -1,7 +1,7 @@
-From 3f4fca0eed57326e2ba4ca3bc0a753823d4d64ac Mon Sep 17 00:00:00 2001
+From ef43d2763453c7a84fd0eb5e7c797a30dd791750 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 01:02:40 -0400
-Subject: [PATCH 01/17] going slow
+Subject: [PATCH 01/18] going slow
 
 ---
  .../browser/extensions/api/web_request/web_request_api_constants.cc  |    2 ++
@@ -65,10 +65,10 @@ index 75c2304..d365364 100644
 1.7.10.2 (Apple Git-33)
 
 
-From e85abdd4145e98ebebc54240ad45c3bc1718848a Mon Sep 17 00:00:00 2001
+From ab5775ca9daeafb54e8d6c83ad00d30a0427e10d Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 01:12:36 -0400
-Subject: [PATCH 02/17] ok, add that
+Subject: [PATCH 02/18] ok, add that
 
 ---
  chrome/browser/extensions/api/web_request/web_request_api.cc |    2 ++
@@ -76,7 +76,7 @@ Subject: [PATCH 02/17] ok, add that
  2 files changed, 6 insertions(+), 3 deletions(-)
 
 diff --git a/chrome/browser/extensions/api/web_request/web_request_api.cc b/chrome/browser/extensions/api/web_request/web_request_api.cc
-index 1b4fe41..de59b7f 100644
+index eef2a807..448bdfb 100644
 --- a/chrome/browser/extensions/api/web_request/web_request_api.cc
 +++ b/chrome/browser/extensions/api/web_request/web_request_api.cc
 @@ -126,6 +126,8 @@ const char* GetRequestStageAsString(
@@ -110,10 +110,10 @@ index 8a2795b..26848d9 100644
 1.7.10.2 (Apple Git-33)
 
 
-From f6c73490ab8a3b7212dbe5f5e1e41418466c25b5 Mon Sep 17 00:00:00 2001
+From f11c870e7e09e06f7b440ba3520947597bdcc89f Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 01:42:09 -0400
-Subject: [PATCH 03/17] ok
+Subject: [PATCH 03/18] ok
 
 ---
  .../extensions/api/web_request/web_request_api.cc       |   15 +++++++++++----
@@ -122,7 +122,7 @@ Subject: [PATCH 03/17] ok
  3 files changed, 16 insertions(+), 5 deletions(-)
 
 diff --git a/chrome/browser/extensions/api/web_request/web_request_api.cc b/chrome/browser/extensions/api/web_request/web_request_api.cc
-index de59b7f..f3cd016 100644
+index 448bdfb..b625116 100644
 --- a/chrome/browser/extensions/api/web_request/web_request_api.cc
 +++ b/chrome/browser/extensions/api/web_request/web_request_api.cc
 @@ -907,10 +907,17 @@ ExtensionWebRequestEventRouter::OnAuthRequired(
@@ -179,10 +179,10 @@ index 62a59c8..9a162ba 100644
 1.7.10.2 (Apple Git-33)
 
 
-From 10b4c5df845369e5b1b94091e3ba390993c2296c Mon Sep 17 00:00:00 2001
+From 1878e52f3c461bfda524d9f5fbf660ea1fb7ab28 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 13:22:43 -0400
-Subject: [PATCH 04/17] got my own auth handler to show up
+Subject: [PATCH 04/18] got my own auth handler to show up
 
 ---
  net/http/http_attestation_handler.cc  |   78 +++++++++++++++++++++++++++++++++
@@ -410,10 +410,10 @@ index cfa668a..e795baa 100644
 1.7.10.2 (Apple Git-33)
 
 
-From e7bbf48818e4d9a281bf619ed672dd4be63e294c Mon Sep 17 00:00:00 2001
+From 1937a80fd7ba76e87446a610041774ee18520714 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 16:13:13 -0400
-Subject: [PATCH 05/17] wasnt initializing this
+Subject: [PATCH 05/18] wasnt initializing this
 
 ---
  net/http/http_auth_controller.cc |    1 +
@@ -435,10 +435,10 @@ index 9cc57de..ab4d553 100644
 1.7.10.2 (Apple Git-33)
 
 
-From aab9c098bc9e1880822e816ccab8192481844292 Mon Sep 17 00:00:00 2001
+From a7b09e73153c2b143413b2b9167d207d446c0d43 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 17:03:22 -0400
-Subject: [PATCH 06/17] add request body to onAuthRequired call
+Subject: [PATCH 06/18] add request body to onAuthRequired call
 
 ---
  .../extensions/api/web_request/web_request_api.cc  |    3 +++
@@ -446,7 +446,7 @@ Subject: [PATCH 06/17] add request body to onAuthRequired call
  2 files changed, 29 insertions(+), 2 deletions(-)
 
 diff --git a/chrome/browser/extensions/api/web_request/web_request_api.cc b/chrome/browser/extensions/api/web_request/web_request_api.cc
-index f3cd016..168e33c 100644
+index b625116..a5e3ced 100644
 --- a/chrome/browser/extensions/api/web_request/web_request_api.cc
 +++ b/chrome/browser/extensions/api/web_request/web_request_api.cc
 @@ -938,6 +938,9 @@ ExtensionWebRequestEventRouter::OnAuthRequired(
@@ -509,10 +509,10 @@ index 5d279c7..9e0dead 100644
 1.7.10.2 (Apple Git-33)
 
 
-From 106d02f9c005b00ad0592a3115f30bfae7a1106d Mon Sep 17 00:00:00 2001
+From 0173d2342cb4aeec05fef6b22f5093df7b39b21b Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 17:33:25 -0400
-Subject: [PATCH 07/17] possible added onAttestationRequired as proper event
+Subject: [PATCH 07/18] possible added onAttestationRequired as proper event
 
 ---
  .../extensions/api/web_request/web_request_api.cc  |    1 +
@@ -520,7 +520,7 @@ Subject: [PATCH 07/17] possible added onAttestationRequired as proper event
  2 files changed, 83 insertions(+)
 
 diff --git a/chrome/browser/extensions/api/web_request/web_request_api.cc b/chrome/browser/extensions/api/web_request/web_request_api.cc
-index 168e33c..0c63e57 100644
+index a5e3ced..e4aef5e 100644
 --- a/chrome/browser/extensions/api/web_request/web_request_api.cc
 +++ b/chrome/browser/extensions/api/web_request/web_request_api.cc
 @@ -103,6 +103,7 @@ const char* const kWebRequestEvents[] = {
@@ -628,10 +628,10 @@ index 9e0dead..ea16865 100644
 1.7.10.2 (Apple Git-33)
 
 
-From 7f5ea22a6096f75157e74d3c6acc414b4c003fc4 Mon Sep 17 00:00:00 2001
+From e0e8365c399f7e0256d8d67dc83c40f0c8c202d0 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 18:26:58 -0400
-Subject: [PATCH 08/17] if hander returns true to IsAttestation, send to
+Subject: [PATCH 08/18] if hander returns true to IsAttestation, send to
  onAttestationRequired
 
 ---
@@ -716,10 +716,10 @@ index dfb50d4..9f63775 100644
 1.7.10.2 (Apple Git-33)
 
 
-From c4478b33d59d89642313b9cf61245fee37cbe5ca Mon Sep 17 00:00:00 2001
+From e5c00e61efe4bda655828ea1a7223cc883413d3a Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 19:28:32 -0400
-Subject: [PATCH 09/17] attestation_state_ to url_request_job
+Subject: [PATCH 09/18] attestation_state_ to url_request_job
 
 ---
  net/url_request/url_request_http_job.cc |   27 +++++++++++++++++++--------
@@ -727,7 +727,7 @@ Subject: [PATCH 09/17] attestation_state_ to url_request_job
  2 files changed, 21 insertions(+), 9 deletions(-)
 
 diff --git a/net/url_request/url_request_http_job.cc b/net/url_request/url_request_http_job.cc
-index c5c209c..c1a9b0a 100644
+index e3e84d3..95737d2 100644
 --- a/net/url_request/url_request_http_job.cc
 +++ b/net/url_request/url_request_http_job.cc
 @@ -175,6 +175,7 @@ URLRequestHttpJob::URLRequestHttpJob(
@@ -738,7 +738,7 @@ index c5c209c..c1a9b0a 100644
        start_callback_(base::Bind(&URLRequestHttpJob::OnStartCompleted,
                                   base::Unretained(this))),
        notify_before_headers_sent_callback_(
-@@ -1080,6 +1081,11 @@ bool URLRequestHttpJob::NeedsAuth() {
+@@ -1079,6 +1080,11 @@ bool URLRequestHttpJob::NeedsAuth() {
          return false;
        server_auth_state_ = AUTH_STATE_NEED_AUTH;
        return true;
@@ -750,7 +750,7 @@ index c5c209c..c1a9b0a 100644
    }
    return false;
  }
-@@ -1091,10 +1097,11 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
+@@ -1090,10 +1096,11 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
  
    // sanity checks:
    DCHECK(proxy_auth_state_ == AUTH_STATE_NEED_AUTH ||
@@ -765,7 +765,7 @@ index c5c209c..c1a9b0a 100644
  
    *result = response_info_->auth_challenge;
  }
-@@ -1102,12 +1109,14 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
+@@ -1101,12 +1108,14 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
  void URLRequestHttpJob::SetAuth(const AuthCredentials& credentials) {
    DCHECK(transaction_.get());
  
@@ -783,7 +783,7 @@ index c5c209c..c1a9b0a 100644
    }
  
    RestartTransactionWithAuth(credentials);
-@@ -1117,9 +1126,11 @@ void URLRequestHttpJob::CancelAuth() {
+@@ -1116,9 +1125,11 @@ void URLRequestHttpJob::CancelAuth() {
    // Proxy gets set first, then WWW.
    if (proxy_auth_state_ == AUTH_STATE_NEED_AUTH) {
      proxy_auth_state_ = AUTH_STATE_CANCELED;
@@ -817,10 +817,10 @@ index d5aa5ba..39c3071 100644
 1.7.10.2 (Apple Git-33)
 
 
-From b035fbaf5b6179c730e6c396d3c4e266c8d9f1fc Mon Sep 17 00:00:00 2001
+From cd17b21758ad0869fa8b314dee7056b832f62dde Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 22:54:03 -0400
-Subject: [PATCH 10/17] working
+Subject: [PATCH 10/18] working
 
 ---
  net/http/http_auth.cc                   |    6 ++++
@@ -987,7 +987,7 @@ index eace1df..4b04a96 100644
  }
  
 diff --git a/net/http/http_cache_transaction.cc b/net/http/http_cache_transaction.cc
-index e2d46be..aef0bbe 100644
+index 6481990..5d7587a 100644
 --- a/net/http/http_cache_transaction.cc
 +++ b/net/http/http_cache_transaction.cc
 @@ -958,7 +958,8 @@ int HttpCache::Transaction::DoSuccessfulSendRequest() {
@@ -1167,10 +1167,10 @@ index 6178117..e03ec11 100644
    static const char kConnection[];
    static const char kContentType[];
 diff --git a/net/url_request/url_request_http_job.cc b/net/url_request/url_request_http_job.cc
-index c1a9b0a..8f02462 100644
+index 95737d2..74196e5 100644
 --- a/net/url_request/url_request_http_job.cc
 +++ b/net/url_request/url_request_http_job.cc
-@@ -1109,10 +1109,12 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
+@@ -1108,10 +1108,12 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
  void URLRequestHttpJob::SetAuth(const AuthCredentials& credentials) {
    DCHECK(transaction_.get());
  
@@ -1187,10 +1187,10 @@ index c1a9b0a..8f02462 100644
 1.7.10.2 (Apple Git-33)
 
 
-From f83e35de3851f1cb4e5f19e22926a1488d5cfa32 Mon Sep 17 00:00:00 2001
+From 50db4e3a0a90386253266db64e399c09aeab953c Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 23:10:10 -0400
-Subject: [PATCH 11/17] another log
+Subject: [PATCH 11/18] another log
 
 ---
  net/http/http_auth_controller.cc |    2 ++
@@ -1213,10 +1213,10 @@ index e7d27ad..0ec79a5 100644
 1.7.10.2 (Apple Git-33)
 
 
-From 095b1355c00e79f32277e7980288acfd15078f42 Mon Sep 17 00:00:00 2001
+From aeb16679198daa63be97bc284c8771d12d654c55 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 01:33:20 -0400
-Subject: [PATCH 12/17] in good shape
+Subject: [PATCH 12/18] in good shape
 
 ---
  net/http/http_auth.cc                 |   47 +++++++++++++++++++++++++++++++++
@@ -1353,10 +1353,10 @@ index fef6d29..9c99108 100644
 1.7.10.2 (Apple Git-33)
 
 
-From a9da5edc64f65fccbd0f7d7e58059be2717e07ec Mon Sep 17 00:00:00 2001
+From 2d7114bf6656bee477c7f62674857ae84c8f43d6 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 01:46:40 -0400
-Subject: [PATCH 13/17] clean up a bit
+Subject: [PATCH 13/18] clean up a bit
 
 ---
  net/http/http_auth_controller.cc        |   14 ++++----------
@@ -1527,10 +1527,10 @@ index 6543a78..147d4a5 100644
    if (status == HTTP_PROXY_AUTHENTICATION_REQUIRED) {
      target = HttpAuth::AUTH_PROXY;
 diff --git a/net/url_request/url_request_http_job.cc b/net/url_request/url_request_http_job.cc
-index 8f02462..c1a9b0a 100644
+index 74196e5..95737d2 100644
 --- a/net/url_request/url_request_http_job.cc
 +++ b/net/url_request/url_request_http_job.cc
-@@ -1109,12 +1109,10 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
+@@ -1108,12 +1108,10 @@ void URLRequestHttpJob::GetAuthChallengeInfo(
  void URLRequestHttpJob::SetAuth(const AuthCredentials& credentials) {
    DCHECK(transaction_.get());
  
@@ -1547,20 +1547,20 @@ index 8f02462..c1a9b0a 100644
 1.7.10.2 (Apple Git-33)
 
 
-From c08ed6611df61c67b4e56d6c512a64ba6217d1b8 Mon Sep 17 00:00:00 2001
+From 671df3cbbd6f12e9c6e300c515d3a6b3627821fb Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 18:11:47 -0400
-Subject: [PATCH 14/17] add attestation as a default supported scheme
+Subject: [PATCH 14/18] add attestation as a default supported scheme
 
 ---
  chrome/browser/io_thread.cc |    2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/chrome/browser/io_thread.cc b/chrome/browser/io_thread.cc
-index 55b3f62..74cb0bb 100644
+index 29a65ea..ec38ecc 100644
 --- a/chrome/browser/io_thread.cc
 +++ b/chrome/browser/io_thread.cc
-@@ -866,7 +866,7 @@ void IOThread::EnableSpdy(const std::string& mode) {
+@@ -867,7 +867,7 @@ void IOThread::EnableSpdy(const std::string& mode) {
  void IOThread::RegisterPrefs(PrefRegistrySimple* registry) {
    registry->RegisterStringPref(prefs::kAuthSchemes,
                                 "basic,digest,ntlm,negotiate,"
@@ -1573,10 +1573,10 @@ index 55b3f62..74cb0bb 100644
 1.7.10.2 (Apple Git-33)
 
 
-From e2005fdf92994f3a2c49e282620f521ac86a52c1 Mon Sep 17 00:00:00 2001
+From cbad439bfca073cfc7f8c8b69e9b8874ca6431a7 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 18:19:52 -0400
-Subject: [PATCH 15/17] clean
+Subject: [PATCH 15/18] clean
 
 ---
  net/http/http_attestation_handler.cc |   63 ++++++++++++++++++++++++++++++++--
@@ -1692,10 +1692,10 @@ index 611c6f4..d9ac30c 100644
 1.7.10.2 (Apple Git-33)
 
 
-From f01736b09265a8bd979c372134c4bd7b4e5e3ca3 Mon Sep 17 00:00:00 2001
+From f4c71b577ca589200813c253b91692b0ba4351b4 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Wed, 30 Apr 2014 14:43:52 -0400
-Subject: [PATCH 16/17] parse nonce
+Subject: [PATCH 16/18] parse nonce
 
 ---
  net/http/http_attestation_handler.cc |   24 +++++++++++++++++++++++-
@@ -1761,10 +1761,10 @@ index d9ac30c..29bcb32 100644
 1.7.10.2 (Apple Git-33)
 
 
-From b1e038b01109108e93c3ff5f77ec61469251270b Mon Sep 17 00:00:00 2001
+From 975cb378a7729628e07f7ffff8f6a361f660d793 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Wed, 30 Apr 2014 23:00:34 -0400
-Subject: [PATCH 17/17] sha and rsa signature on Attestation
+Subject: [PATCH 17/18] sha and rsa signature on Attestation
 
 ---
  net/http/http_attestation_handler.cc |  147 ++++++++++++++++++++++++++++++++--
@@ -1957,6 +1957,122 @@ index 29bcb32..7f003fc 100644
  #include "net/base/net_export.h"
  #include "net/http/http_auth_handler.h"
  #include "net/http/http_auth_handler_factory.h"
+-- 
+1.7.10.2 (Apple Git-33)
+
+
+From d45d1e60adca018b974ee8ff6e5203a636702f2c Mon Sep 17 00:00:00 2001
+From: Louis Sobel <sobel@mit.edu>
+Date: Fri, 9 May 2014 14:24:05 -0400
+Subject: [PATCH 18/18] undo the request body stuff in webrequest
+
+---
+ .../extensions/api/web_request/web_request_api.cc  |    3 --
+ chrome/common/extensions/api/web_request.json      |   56 ++------------------
+ 2 files changed, 4 insertions(+), 55 deletions(-)
+
+diff --git a/chrome/browser/extensions/api/web_request/web_request_api.cc b/chrome/browser/extensions/api/web_request/web_request_api.cc
+index e4aef5e..5d89a6a 100644
+--- a/chrome/browser/extensions/api/web_request/web_request_api.cc
++++ b/chrome/browser/extensions/api/web_request/web_request_api.cc
+@@ -939,9 +939,6 @@ ExtensionWebRequestEventRouter::OnAuthRequired(
+     dict->Set(keys::kResponseHeadersKey,
+               GetResponseHeadersList(request->response_headers()));
+   }
+-  if (extra_info_spec & ExtraInfoSpec::REQUEST_BODY) {
+-    ExtractRequestInfoBody(request, dict);
+-  }
+   args.Append(dict);
+ 
+   if (DispatchEvent(profile, request, listeners, args)) {
+diff --git a/chrome/common/extensions/api/web_request.json b/chrome/common/extensions/api/web_request.json
+index ea16865..e9588f4 100644
+--- a/chrome/common/extensions/api/web_request.json
++++ b/chrome/common/extensions/api/web_request.json
+@@ -339,31 +339,7 @@
+               "challenger": {"type": "object", "description": "The server requesting authentication.", "properties": {"host": {"type": "string"}, "port": {"type": "integer"}}},
+               "isProxy": {"type": "boolean", "description": "True for Proxy-Authenticate, false for WWW-Authenticate."},
+               "responseHeaders": {"$ref": "HttpHeaders", "optional": true, "description": "The HTTP response headers that were received along with this response."},
+-              "statusLine": {"type": "string", "description": "HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers."},
+-              "requestBody": {
+-                "type": "object",
+-                "optional": true,
+-                "description": "Contains the HTTP request body data. Only provided if extraInfoSpec contains 'requestBody'.",
+-                "properties": {
+-                  "error": {"type": "string", "optional": true, "description": "Errors when obtaining request body data."},
+-                  "formData": {
+-                    "type": "object",
+-                    "optional": true,
+-                    "description": "If the request method is POST and the body is a sequence of key-value pairs encoded in UTF8, encoded as either multipart/form-data, or application/x-www-form-urlencoded, this dictionary is present and for each key contains the list of all values for that key. If the data is of another media type, or if it is malformed, the dictionary is not present. An example value of this dictionary is {'key': ['value1', 'value2']}.",
+-                    "properties": {},
+-                    "additionalProperties": {
+-                      "type": "array",
+-                      "items": { "type": "string" }
+-                    }
+-                  },
+-                  "raw" : {
+-                    "type": "array",
+-                    "optional": true,
+-                    "items": {"$ref": "UploadData"},
+-                    "description": "If the request method is PUT or POST, and the body is not already parsed in formData, then the unparsed request body elements are contained in this array."
+-                  }
+-                }
+-              }
++              "statusLine": {"type": "string", "description": "HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers."}
+             }
+           },
+           {
+@@ -388,7 +364,7 @@
+             "description": "Array of extra information that should be passed to the listener function.",
+             "items": {
+               "type": "string",
+-              "enum": ["responseHeaders", "blocking", "asyncBlocking", "requestBody"]
++              "enum": ["responseHeaders", "blocking", "asyncBlocking"]
+             }
+           }
+         ],
+@@ -421,31 +397,7 @@
+               "challenger": {"type": "object", "description": "The server requesting attestation.", "properties": {"host": {"type": "string"}, "port": {"type": "integer"}}},
+               "isProxy": {"type": "boolean", "description": "True for Proxy-Authenticate, false for WWW-Authenticate."},
+               "responseHeaders": {"$ref": "HttpHeaders", "optional": true, "description": "The HTTP response headers that were received along with this response."},
+-              "statusLine": {"type": "string", "description": "HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers."},
+-              "requestBody": {
+-                "type": "object",
+-                "optional": true,
+-                "description": "Contains the HTTP request body data. Only provided if extraInfoSpec contains 'requestBody'.",
+-                "properties": {
+-                  "error": {"type": "string", "optional": true, "description": "Errors when obtaining request body data."},
+-                  "formData": {
+-                    "type": "object",
+-                    "optional": true,
+-                    "description": "If the request method is POST and the body is a sequence of key-value pairs encoded in UTF8, encoded as either multipart/form-data, or application/x-www-form-urlencoded, this dictionary is present and for each key contains the list of all values for that key. If the data is of another media type, or if it is malformed, the dictionary is not present. An example value of this dictionary is {'key': ['value1', 'value2']}.",
+-                    "properties": {},
+-                    "additionalProperties": {
+-                      "type": "array",
+-                      "items": { "type": "string" }
+-                    }
+-                  },
+-                  "raw" : {
+-                    "type": "array",
+-                    "optional": true,
+-                    "items": {"$ref": "UploadData"},
+-                    "description": "If the request method is PUT or POST, and the body is not already parsed in formData, then the unparsed request body elements are contained in this array."
+-                  }
+-                }
+-              }
++              "statusLine": {"type": "string", "description": "HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (i.e., responses that lack a status line) or an empty string if there are no headers."}
+             }
+           },
+           {
+@@ -470,7 +422,7 @@
+             "description": "Array of extra information that should be passed to the listener function.",
+             "items": {
+               "type": "string",
+-              "enum": ["responseHeaders", "blocking", "asyncBlocking", "requestBody"]
++              "enum": ["responseHeaders", "blocking", "asyncBlocking"]
+             }
+           }
+         ],
 -- 
 1.7.10.2 (Apple Git-33)
 
