@@ -24,16 +24,6 @@ chrome.runtime.onMessage.addListener(function (message, fromWhom) {
   console.log("Got content for tab ", fromWhom.tab.id);
 });
 
-chrome.webRequest.onAuthRequired.addListener(function (details, callback) {
-  console.log("Auth:", details);
-  callback();
-},
-{
-  urls: ["<all_urls>"]
-},
-["asyncBlocking", "requestBody"]
-)
-
 chrome.webRequest.onAttestationRequired.addListener(function (details, callback) {
   console.log("Attestation:", details);
   if (requestsProcessed.hasOwnProperty(details.requestId)) {
@@ -68,5 +58,5 @@ chrome.webRequest.onAttestationRequired.addListener(function (details, callback)
 {
   urls: ["<all_urls>"]
 },
-["asyncBlocking", "requestBody"]
+["asyncBlocking"]
 )
