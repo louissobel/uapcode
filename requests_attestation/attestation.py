@@ -73,12 +73,16 @@ class HTTPAttestation(AuthBase):
         d.update(main_source)
         return base64.b64encode(d.digest())
 
-    def get_request_body_digest(self, prepared_request):
+    def get_request_digest(self, prepared_request):
         """
         md5 of request body
         md5 because because.
         """
         d = hashlib.md5()
+        d.update(prepared_request.method)
+        d.update(":")
+        d.update(prepared_request.path_url)
+        d.update(":")
         if prepared_request.body:
             d.update(prepared_request.body)
         return d.hexdigest()
@@ -86,9 +90,9 @@ class HTTPAttestation(AuthBase):
     def build_attestation_header(self, prepared_request):
         nonce = self.chal['nonce']
         extra_attestation = self.get_extra_attestation()
-        body_digest = self.get_request_body_digest(prepared_request)
+        request_digest = self.get_request_digest(prepared_request)
 
-        include_in_signature = "%s:%s:%s" % (extra_attestation, nonce, body_digest)
+        include_in_signature = "%s:%s:%s" % (extra_attestation, nonce, request_digest)
         attestation, signature = self.tcb.get_attestation_and_signature(include_in_signature)
         return "%s:%s:%s:%s" % (attestation, extra_attestation, nonce, signature)
 

@@ -9,3 +9,8 @@ print r.status_code
 print "Get.."
 r = requests.get('http://localhost:7001/', auth=HTTPAttestation())
 print r.status_code
+
+
+print "Get.."
+r = requests.get('http://localhost:7001/?bloopbloop=bap', auth=HTTPAttestation())
+print r.status_code
