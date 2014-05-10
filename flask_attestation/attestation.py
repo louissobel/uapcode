@@ -10,7 +10,7 @@ import base64
 import rsa
 import flask
 
-from body_digest_middleware import BodyDigestMiddleware
+from request_digest_middleware import RequestDigestMiddleware
 
 NONCE_CHARS = list('0123456789abcdef')
 
@@ -53,8 +53,8 @@ class AttestationManager(object):
 
     def __init__(self, app):
 
-        # Wrap it so we can access the body digest
-        app.wsgi_app = BodyDigestMiddleware(app.wsgi_app)
+        # Wrap it so we can access the request digest
+        app.wsgi_app = RequestDigestMiddleware(app.wsgi_app)
         self.handlers = []
         self.nonce_store = NonceStore()
 
@@ -119,9 +119,9 @@ class AttestationManager(object):
             return False
         print "Extra attestation %s accepted" % extra_attestation
 
-        # Get body digest and signed message
-        body_digest = self._get_body_digest(request)
-        m = attestation + ':' + extra_attestation + ':' + nonce + ':' + body_digest
+        # Get request digest and signed message
+        request_digest = self._get_request_digest(request)
+        m = attestation + ':' + extra_attestation + ':' + nonce + ':' + request_digest
 
         # Now lets validate the signature.
         if not handler.will_accept_signature(m, signature):
@@ -133,8 +133,8 @@ class AttestationManager(object):
         # are all good. Lets let them in!
         return True
 
-    def _get_body_digest(self, request):
-        return request.environ['body_md5']
+    def _get_request_digest(self, request):
+        return request.environ['request_md5']
 
     def _get_attestation_challenge(self):
         nonce = self.nonce_store.get_new_nonce()
