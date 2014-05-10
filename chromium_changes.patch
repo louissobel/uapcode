@@ -1,7 +1,7 @@
 From ef43d2763453c7a84fd0eb5e7c797a30dd791750 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 01:02:40 -0400
-Subject: [PATCH 01/18] going slow
+Subject: [PATCH 01/19] going slow
 
 ---
  .../browser/extensions/api/web_request/web_request_api_constants.cc  |    2 ++
@@ -68,7 +68,7 @@ index 75c2304..d365364 100644
 From ab5775ca9daeafb54e8d6c83ad00d30a0427e10d Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 01:12:36 -0400
-Subject: [PATCH 02/18] ok, add that
+Subject: [PATCH 02/19] ok, add that
 
 ---
  chrome/browser/extensions/api/web_request/web_request_api.cc |    2 ++
@@ -113,7 +113,7 @@ index 8a2795b..26848d9 100644
 From f11c870e7e09e06f7b440ba3520947597bdcc89f Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 01:42:09 -0400
-Subject: [PATCH 03/18] ok
+Subject: [PATCH 03/19] ok
 
 ---
  .../extensions/api/web_request/web_request_api.cc       |   15 +++++++++++----
@@ -182,7 +182,7 @@ index 62a59c8..9a162ba 100644
 From 1878e52f3c461bfda524d9f5fbf660ea1fb7ab28 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 13:22:43 -0400
-Subject: [PATCH 04/18] got my own auth handler to show up
+Subject: [PATCH 04/19] got my own auth handler to show up
 
 ---
  net/http/http_attestation_handler.cc  |   78 +++++++++++++++++++++++++++++++++
@@ -413,7 +413,7 @@ index cfa668a..e795baa 100644
 From 1937a80fd7ba76e87446a610041774ee18520714 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 16:13:13 -0400
-Subject: [PATCH 05/18] wasnt initializing this
+Subject: [PATCH 05/19] wasnt initializing this
 
 ---
  net/http/http_auth_controller.cc |    1 +
@@ -438,7 +438,7 @@ index 9cc57de..ab4d553 100644
 From a7b09e73153c2b143413b2b9167d207d446c0d43 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 17:03:22 -0400
-Subject: [PATCH 06/18] add request body to onAuthRequired call
+Subject: [PATCH 06/19] add request body to onAuthRequired call
 
 ---
  .../extensions/api/web_request/web_request_api.cc  |    3 +++
@@ -512,7 +512,7 @@ index 5d279c7..9e0dead 100644
 From 0173d2342cb4aeec05fef6b22f5093df7b39b21b Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 17:33:25 -0400
-Subject: [PATCH 07/18] possible added onAttestationRequired as proper event
+Subject: [PATCH 07/19] possible added onAttestationRequired as proper event
 
 ---
  .../extensions/api/web_request/web_request_api.cc  |    1 +
@@ -631,7 +631,7 @@ index 9e0dead..ea16865 100644
 From e0e8365c399f7e0256d8d67dc83c40f0c8c202d0 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 18:26:58 -0400
-Subject: [PATCH 08/18] if hander returns true to IsAttestation, send to
+Subject: [PATCH 08/19] if hander returns true to IsAttestation, send to
  onAttestationRequired
 
 ---
@@ -719,7 +719,7 @@ index dfb50d4..9f63775 100644
 From e5c00e61efe4bda655828ea1a7223cc883413d3a Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 19:28:32 -0400
-Subject: [PATCH 09/18] attestation_state_ to url_request_job
+Subject: [PATCH 09/19] attestation_state_ to url_request_job
 
 ---
  net/url_request/url_request_http_job.cc |   27 +++++++++++++++++++--------
@@ -820,7 +820,7 @@ index d5aa5ba..39c3071 100644
 From cd17b21758ad0869fa8b314dee7056b832f62dde Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 22:54:03 -0400
-Subject: [PATCH 10/18] working
+Subject: [PATCH 10/19] working
 
 ---
  net/http/http_auth.cc                   |    6 ++++
@@ -1190,7 +1190,7 @@ index 95737d2..74196e5 100644
 From 50db4e3a0a90386253266db64e399c09aeab953c Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Mon, 28 Apr 2014 23:10:10 -0400
-Subject: [PATCH 11/18] another log
+Subject: [PATCH 11/19] another log
 
 ---
  net/http/http_auth_controller.cc |    2 ++
@@ -1216,7 +1216,7 @@ index e7d27ad..0ec79a5 100644
 From aeb16679198daa63be97bc284c8771d12d654c55 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 01:33:20 -0400
-Subject: [PATCH 12/18] in good shape
+Subject: [PATCH 12/19] in good shape
 
 ---
  net/http/http_auth.cc                 |   47 +++++++++++++++++++++++++++++++++
@@ -1356,7 +1356,7 @@ index fef6d29..9c99108 100644
 From 2d7114bf6656bee477c7f62674857ae84c8f43d6 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 01:46:40 -0400
-Subject: [PATCH 13/18] clean up a bit
+Subject: [PATCH 13/19] clean up a bit
 
 ---
  net/http/http_auth_controller.cc        |   14 ++++----------
@@ -1550,7 +1550,7 @@ index 74196e5..95737d2 100644
 From 671df3cbbd6f12e9c6e300c515d3a6b3627821fb Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 18:11:47 -0400
-Subject: [PATCH 14/18] add attestation as a default supported scheme
+Subject: [PATCH 14/19] add attestation as a default supported scheme
 
 ---
  chrome/browser/io_thread.cc |    2 +-
@@ -1576,7 +1576,7 @@ index 29a65ea..ec38ecc 100644
 From cbad439bfca073cfc7f8c8b69e9b8874ca6431a7 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Tue, 29 Apr 2014 18:19:52 -0400
-Subject: [PATCH 15/18] clean
+Subject: [PATCH 15/19] clean
 
 ---
  net/http/http_attestation_handler.cc |   63 ++++++++++++++++++++++++++++++++--
@@ -1695,7 +1695,7 @@ index 611c6f4..d9ac30c 100644
 From f4c71b577ca589200813c253b91692b0ba4351b4 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Wed, 30 Apr 2014 14:43:52 -0400
-Subject: [PATCH 16/18] parse nonce
+Subject: [PATCH 16/19] parse nonce
 
 ---
  net/http/http_attestation_handler.cc |   24 +++++++++++++++++++++++-
@@ -1764,7 +1764,7 @@ index d9ac30c..29bcb32 100644
 From 975cb378a7729628e07f7ffff8f6a361f660d793 Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Wed, 30 Apr 2014 23:00:34 -0400
-Subject: [PATCH 17/18] sha and rsa signature on Attestation
+Subject: [PATCH 17/19] sha and rsa signature on Attestation
 
 ---
  net/http/http_attestation_handler.cc |  147 ++++++++++++++++++++++++++++++++--
@@ -1964,7 +1964,7 @@ index 29bcb32..7f003fc 100644
 From d45d1e60adca018b974ee8ff6e5203a636702f2c Mon Sep 17 00:00:00 2001
 From: Louis Sobel <sobel@mit.edu>
 Date: Fri, 9 May 2014 14:24:05 -0400
-Subject: [PATCH 18/18] undo the request body stuff in webrequest
+Subject: [PATCH 18/19] undo the request body stuff in webrequest
 
 ---
  .../extensions/api/web_request/web_request_api.cc  |    3 --
@@ -2073,6 +2073,74 @@ index ea16865..e9588f4 100644
              }
            }
          ],
+-- 
+1.7.10.2 (Apple Git-33)
+
+
+From 1b2e344bcb303793224fa4189fdff79f56a6519d Mon Sep 17 00:00:00 2001
+From: Louis Sobel <sobel@mit.edu>
+Date: Sat, 10 May 2014 00:50:40 -0400
+Subject: [PATCH 19/19] use request method and url in request digest
+
+---
+ net/http/http_attestation_handler.cc |   18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+diff --git a/net/http/http_attestation_handler.cc b/net/http/http_attestation_handler.cc
+index b4632fc..cf39e32 100644
+--- a/net/http/http_attestation_handler.cc
++++ b/net/http/http_attestation_handler.cc
+@@ -104,7 +104,7 @@ static const uint8 kSigningPrivateKey[] = {
+   0x63, 0x1a, 0xf2, 0x29, 0x8b, 0x5f
+ };
+ 
+-void GetRequestBodyDigest(const HttpRequestInfo* request, std::string* request_body_digest) {
++void GetRequestDigest(const HttpRequestInfo* request, std::string* request_digest) {
+   // TODO(sobel) currently only works if the upload_data_stream
+   // is not chunked! That's an issue...
+   // TODO(sobel) how do I handle this? crashing for now...
+@@ -113,6 +113,12 @@ void GetRequestBodyDigest(const HttpRequestInfo* request, std::string* request_b
+   base::MD5Context ctx;
+   base::MD5Init(&ctx);
+ 
++  // method : url : body
++  base::MD5Update(&ctx, request->method);
++  base::MD5Update(&ctx, ":");
++  base::MD5Update(&ctx, request->url.PathForRequest());
++  base::MD5Update(&ctx, ":");
++
+   size_t request_size;
+ 
+   if (NULL == request->upload_data_stream) {
+@@ -152,8 +158,8 @@ void GetRequestBodyDigest(const HttpRequestInfo* request, std::string* request_b
+   base::MD5Digest digest;
+   base::MD5Final(&digest, &ctx);
+   std::string out = MD5DigestToBase16(digest);
+-  DVLOG(1) << "Computed requestBody digest: " << out;
+-  *request_body_digest = out;
++  DVLOG(1) << "Computed request digest: " << out;
++  *request_digest = out;
+ }
+ 
+ void GetAttestationAndSignature(std::string include_in_signature,
+@@ -256,14 +262,14 @@ int HttpAttestationHandler::GenerateAuthTokenImpl(
+   std::string extra_attestation;
+   base::Base64Encode(base::UTF16ToUTF8(credentials->password()), &extra_attestation);
+ 
+-  std::string request_body_digest;
++  std::string request_digest;
+   std::string attestation;
+   std::string signature;
+ 
+   // TODO(sobel) failure?
+-  GetRequestBodyDigest(request, &request_body_digest);
++  GetRequestDigest(request, &request_digest);
+ 
+-  std::string include_in_signature = extra_attestation + ":" + nonce_ + ":" + request_body_digest;
++  std::string include_in_signature = extra_attestation + ":" + nonce_ + ":" + request_digest;
+   GetAttestationAndSignature(include_in_signature, &attestation, &signature);
+ 
+   *auth_token = attestation + ":" + extra_attestation + ":" + nonce_ + ":" + signature;
 -- 
 1.7.10.2 (Apple Git-33)
 
